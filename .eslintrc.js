@@ -1,7 +1,5 @@
 module.exports = {
-  "plugins": [
-    "jsx-a11y"
-  ],
+  "plugins": [],
   extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:jsx-a11y/recommended'],
   rules: {
     'react/prop-types': 0,
