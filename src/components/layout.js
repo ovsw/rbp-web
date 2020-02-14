@@ -27,6 +27,11 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
           display: 'flex',
           height: 'auto'
         }
+      },
+      '.map': {
+        height: '900px',
+        zIndex: '1',
+        background: '#f7f7f7 !important'
       }
     })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />

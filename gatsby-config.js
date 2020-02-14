@@ -249,6 +249,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: false // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-theme-ui',
     'gatsby-theme-style-guide',
