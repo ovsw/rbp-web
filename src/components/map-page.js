@@ -95,7 +95,7 @@ const MapPage = ({locations}) => {
               [961, 1920]
             ]}
             minZoom={-0.5}
-            maxZoom={-0.5}
+            maxZoom={0}
             zoomSnap={0.1}
             // center={[1000, 960]}
             style={{height: `${(height - 145).toString()}px`, marginTop: '145px'}}
