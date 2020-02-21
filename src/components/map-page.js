@@ -113,7 +113,9 @@ const MapPage = ({locations}) => {
             onClick={this.MarkerClick}
           /> */}
             {locations.edges.map(({node}, index) => {
-              const latLong = [node.y, node.x]
+              const lat = node.y || 0
+              const long = node.x || 0
+              const latLong = [lat, long]
               const currOffset = calcLabelOffset(node.labelDirection)
               // console.log(node.labelDirection)
 

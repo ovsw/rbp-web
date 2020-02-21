@@ -55,7 +55,8 @@ const TransportationSection = () => {
               <li><span>Pennington</span></li>
               <li><span>Princeton</span></li>
               <li><span>Robbinsville</span></li>
-              <li><span>Titusville.</span></li>
+              <li><span>Titusville</span></li>
+              <li><span>West Windsor</span></li>
             </ul>
           </Box>
 
@@ -66,7 +67,7 @@ const TransportationSection = () => {
               <li><span>Hillsborough</span></li>
               <li><span>Neshanic</span></li>
               <li><span>Rocky Hill</span></li>
-              <li><span>Skillman.</span></li>
+              <li><span>Skillman</span></li>
             </ul>
 
           </Box>
@@ -79,7 +80,7 @@ const TransportationSection = () => {
               <li><span>Lambertville</span></li>
               <li><span>Sergeantville</span></li>
               <li><span>Stockton</span></li>
-              <li><span>West Amwell.</span></li>
+              <li><span>West Amwell</span></li>
             </ul>
           </Box>
 
@@ -89,7 +90,7 @@ const TransportationSection = () => {
               <li><span>New Hope</span></li>
               <li><span>Newtown</span></li>
               <li><span>Washington Crossing</span></li>
-              <li><span>Yardley.</span></li>
+              <li><span>Yardley</span></li>
             </ul>
           </Box>
 
@@ -98,7 +99,7 @@ const TransportationSection = () => {
             <ul>
               <li><span>Kendall Park</span></li>
               <li><span>Plainsboro</span></li>
-              <li><span>South Brunswick.</span></li>
+              <li><span>South Brunswick</span></li>
             </ul>
           </Box>
         </Flex>

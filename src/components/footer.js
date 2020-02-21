@@ -25,7 +25,7 @@ const Footer = () => {
               <div className='adr' sx={{mt: 4}}>
                 <div className='street-address'>174 Lambertville Hopewell Rd.</div>
                 <span className='locality'>Hopewell</span>,{' '}
-                <span className='region'>NJ</span>2{' '}
+                <span className='region'>NJ</span>{' '}
                 <span className='postal-code'>08525</span>{' '}
                 <span className='country-name'>United States</span>
               </div>

@@ -110,12 +110,12 @@ module.exports = {
                 title: 'FAQs',
                 slug: '/faqs/',
                 children: []
-              },
-              {
-                title: 'New for 2020',
-                slug: '/new-for-2020/',
-                children: []
               }
+              // {
+              //   title: 'New for 2020',
+              //   slug: '/new-for-2020/',
+              //   children: []
+              // }
             ]
           }
         ]
@@ -141,15 +141,15 @@ module.exports = {
                 title: 'History',
                 slug: '/history/',
                 children: []
-              }
-            ]
-          },
-          {
-            title: 'column 2',
-            children: [
+              },
               {
                 title: 'Location',
                 slug: '/location/',
+                children: []
+              },
+              {
+                title: 'Directions',
+                slug: '/directions/',
                 children: []
               },
               {
@@ -173,24 +173,19 @@ module.exports = {
                 slug: '/lunch-menu',
                 children: []
               },
+              // {
+              //   title: 'Camper Photo App',
+              //   slug: '/camper-photo-app/',
+              //   children: []
+              // },
               {
-                title: 'Camper Photo App',
-                slug: '/camper-photo-app/',
+                title: 'Activity Calendar',
+                slug: '/activities/calendar/',
                 children: []
               },
               {
                 title: 'Camp Store',
                 slug: 'https://www.bunkline.com/category-s/602.htm',
-                children: []
-              }
-            ]
-          },
-          {
-            title: 'column 2',
-            children: [
-              {
-                title: 'New for 2020',
-                slug: '/new-for-2020/',
                 children: []
               },
               {
@@ -203,6 +198,11 @@ module.exports = {
                 slug: 'https://ramblingpines.campintouch.com/v2/login/login.aspx',
                 children: []
               }
+              // {
+              //   title: 'New for 2020',
+              //   slug: '/new-for-2020/',
+              //   children: []
+              // },
             ]
           }
         ]
