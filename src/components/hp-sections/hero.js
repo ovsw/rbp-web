@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
+import React, { useState } from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
 import {Container, jsx, Styled} from 'theme-ui'
 import {Box} from '@theme-ui/components'
+import ModalVideo from 'react-modal-video'
 import HeroVideoBg from './hero-video-bg'
 
 import {FaPlay} from 'react-icons/fa'
@@ -10,7 +11,10 @@ import {FaPlay} from 'react-icons/fa'
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 import BigLogo from '../../images/rambling-pines-art-logo.png'
 
+import '../../../node_modules/react-modal-video/css/modal-video.min.css'
+
 const Hero = () => {
+  const [playFullVideo, setPlayFullVideo] = useState(false)
   return (
     <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} mt={5} sx={{
       textAlign: 'center',
@@ -42,7 +46,7 @@ const Hero = () => {
         left: 0,
         zIndex: 0
       }}>
-        <HeroVideoBg poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
+        <HeroVideoBg playFullVideo={playFullVideo} poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
       </div>
       <Container className='container' sx={{
         maxWidth: '5xl',
@@ -70,15 +74,16 @@ const Hero = () => {
           fontWeight: 'light',
           mt: 0
         }}>Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
-        <Link to='/request-info/' sx={{
+
+        <button onClick={() => setPlayFullVideo(true)} sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
           py: 3,
           mt: 4
         }}>
-          <FaPlay sx={{position: 'relative', top: '2px'}} />{' '}
-          Watch Video
-        </Link>
+          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
+        </button>
+        <ModalVideo autoplay='1' isOpen={playFullVideo} videoId='5rbAeDbueSA' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
       </Container>
     </Box>
   )
