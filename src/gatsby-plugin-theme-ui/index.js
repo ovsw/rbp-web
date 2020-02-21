@@ -294,6 +294,17 @@ export default {
       fontSize: 2,
       lineHeight: 'body'
     },
+    ul: {
+      fontSize: 2,
+      lineHeight: 'body'
+    },
+    'table td': {
+      py: 2,
+      pl: 1
+    },
+    'tr:nth-child(odd)': {
+      bg: 'gray.3'
+    },
     'h1': {
       ...sharedHeadingStyles,
       'fontSize': 6,
