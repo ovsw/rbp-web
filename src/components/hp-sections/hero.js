@@ -5,7 +5,7 @@ import {Container, jsx, Styled} from 'theme-ui'
 import {Box} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 
-import {FaPaperPlane} from 'react-icons/fa'
+import {FaPlay} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 import BigLogo from '../../images/rambling-pines-art-logo.png'
@@ -76,8 +76,8 @@ const Hero = () => {
           py: 3,
           mt: 4
         }}>
-          <FaPaperPlane sx={{position: 'relative', top: '2px'}} />{' '}
-          Request Info
+          <FaPlay sx={{position: 'relative', top: '2px'}} />{' '}
+          Watch Video
         </Link>
       </Container>
     </Box>
