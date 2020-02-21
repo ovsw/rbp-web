@@ -215,23 +215,18 @@ module.exports = {
             title: 'column 1',
             children: [
               {
-                title: 'Welcome',
-                slug: '/welcome/',
-                children: []
-              },
-              {
-                title: 'Employment',
-                slug: '/employment/',
+                title: 'Current Openings',
+                slug: '/staff/current-openings/',
                 children: []
               },
               {
                 title: 'Summer Dates',
-                slug: '/summer-dates/',
+                slug: '/staff/summer-dates/',
                 children: []
               },
               {
                 title: 'Apply',
-                slug: '/staff-application/',
+                slug: 'https://ramblingpines.campintouch.com/ui/forms/application/staff/App',
                 children: []
               }
             ]
