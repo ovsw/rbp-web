@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../containers/layout'
+// import Layout from '../containers/layout'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import GenericPage from '../components/generic-page'
@@ -13,7 +13,7 @@ const GenericPageTemplate = props => {
   const section = data && (data.page.section || 'Future Families')
 
   return (
-    <Layout>
+    <>
       {errors && <SEO seoTitle='GraphQL Error' />}
       {page && <SEO seoTitle={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} />}
 
@@ -23,7 +23,7 @@ const GenericPageTemplate = props => {
         </>
       )}
       <GenericPage {...page} section={section} />
-    </Layout>
+    </>
   )
 }
 

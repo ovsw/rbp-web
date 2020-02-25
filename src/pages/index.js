@@ -7,7 +7,7 @@ import {graphql} from 'gatsby'
 // } from '../lib/helpers'
 // import BlogPostPreviewList from '../components/blog-post-preview-list'
 // import Container from '../components/container'
-import Layout from '../containers/layout'
+// import Layout from '../containers/layout'
 
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -42,7 +42,7 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO
         title={site.title}
         description={site.description}
@@ -62,7 +62,7 @@ const IndexPage = props => {
             browseMoreHref='/archive/'
           />
         )} */}
-    </Layout>
+    </>
   )
 }
 
