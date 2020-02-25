@@ -22,7 +22,7 @@ const Announcement = ({closeAlert}) => {
           }
         },
         '&:hover p': {
-          'animation-play-state': 'paused'
+          animationPlayState: 'paused'
         }
       }}>
         <p sx={{margin: 0, fontSize: [1, 1, 2], display: 'inline-block', pl: ['0', '0', '100%'], pr: [5, 5, '0'], animation: ['none', 'none', 'marquee 15s linear infinite']}}>This is a text announcement. This text can be anything, and even contain <a href='https://www.ramblingpines.com/'>links</a></p>
