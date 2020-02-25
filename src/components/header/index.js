@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React, { useContext } from 'react' // eslint-disable-line
+import React, { useContext, useEffect } from 'react' // eslint-disable-line
 import {Header as ThemeHeader, Container, jsx} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
-import {Link} from 'gatsby'
+import {Link, useStaticQuery, graphql} from 'gatsby'
 import {useSiteMetadata} from '../../hooks/use-site-metadata'
 
 import Icon from '../icon'
@@ -17,17 +17,35 @@ import headerBgImage from '../../images/white-paper-bg3.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
-  const {isAlertShowing, hideAlert} = useContext(appContext)
+  const {isAlertShowing, showAlert, hideAlert} = useContext(appContext)
+
+  const {alertSettings} = useStaticQuery(graphql`
+    query{
+      alertSettings: sanitySiteSettings(id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}){
+        alertToggle
+        _rawAlertText
+      }
+    }
+  `)
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   if (alertSettings.alertToggle) {
+  //     showAlert()
+  //   } else {
+  //     hideAlert()
+  //   }
+  // }, [])
+
   return (
     <ThemeHeader sx={{
       background: `url(${headerBgImage}) repeat bottom left`,
       pb: 2,
       position: 'fixed',
-      width: '100%',
+      width: '110%',
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
-      {isAlertShowing && <Announcement closeAlert={hideAlert} />}
+      {alertSettings.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>

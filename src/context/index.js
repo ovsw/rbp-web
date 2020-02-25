@@ -8,6 +8,7 @@ const AppContextProvider = props => {
   return (
     <appContext.Provider value={{
       isAlertShowing,
+      showAlert: () => setAlertShowing(true),
       hideAlert: () => setAlertShowing(false)
     }}>
       {props.children}
