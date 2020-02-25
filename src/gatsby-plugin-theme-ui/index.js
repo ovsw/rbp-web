@@ -302,7 +302,7 @@ export default {
       py: 2,
       pl: 1
     },
-    'tr:nth-child(odd)': {
+    'tr:nth-of-type(odd)': {
       bg: 'gray.3'
     },
     'h1': {
