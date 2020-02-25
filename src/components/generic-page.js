@@ -10,10 +10,10 @@ import PageSideNav from './generic-page-side-nav'
 
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
   return (
-    <div sx={{marginTop: '7rem'}}>
+    <div sx={{marginTop: ['5.5rem', '5.5rem', '7rem']}}>
       {headerImage && headerImage && (
         <div sx={{
-          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(5 / 16 * 100%)'],
+          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(8 / 16 * 100%)', 'calc(8 / 16 * 100%)', 'calc(7/ 16 * 100%)', 'calc(5/ 16 * 100%)'],
           position: 'relative',
           backgroundImage: `url(${headerImage.asset.metadata.lqip})`,
           backgroundRepeat: 'no-repeat',
