@@ -11,14 +11,13 @@ import TopBar from './top-bar'
 import MainNav from './main-nav'
 import Announcement from './announcement'
 
-import {AlertContext} from '../../contexts/alertContext'
+import {appContext} from '../../context'
 
 import headerBgImage from '../../images/white-paper-bg3.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
-  const {showAlert, closeAlert} = useContext(AlertContext)
-
+  const {isAlertShowing, hideAlert} = useContext(appContext)
   return (
     <ThemeHeader sx={{
       background: `url(${headerBgImage}) repeat bottom left`,
@@ -28,7 +27,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
-      {showAlert && <Announcement closeAlert={closeAlert} />}
+      {isAlertShowing && <Announcement closeAlert={hideAlert} />}
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>

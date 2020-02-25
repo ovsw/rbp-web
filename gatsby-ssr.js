@@ -3,3 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
+
+import AppContextProvider from './src/context'
+export const wrapRootElement = AppContextProvider

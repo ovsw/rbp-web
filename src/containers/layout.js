@@ -2,8 +2,6 @@ import {graphql, StaticQuery} from 'gatsby'
 import React, {useState} from 'react'
 import Layout from '../components/layout'
 
-import {AlertProvider} from '../contexts/alertContext'
-
 const query = graphql`
   query SiteTitleQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
@@ -30,15 +28,13 @@ function LayoutContainer (props) {
           )
         }
         return (
-          <AlertProvider>
-            <Layout
-              {...props}
-              showNav={showNav}
-              siteTitle={data.site.title}
-              onHideNav={handleHideNav}
-              onShowNav={handleShowNav}
-            />
-          </AlertProvider>
+          <Layout
+            {...props}
+            showNav={showNav}
+            siteTitle={data.site.title}
+            onHideNav={handleHideNav}
+            onShowNav={handleShowNav}
+          />
         )
       }}
     />
