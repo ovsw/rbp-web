@@ -81,7 +81,7 @@ const Hero = () => {
           py: 3,
           mt: 4
         }}>
-          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
+          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Full Video
         </button>
         <ModalVideo autoplay='1' isOpen={playFullVideo} videoId='5rbAeDbueSA' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
       </Container>

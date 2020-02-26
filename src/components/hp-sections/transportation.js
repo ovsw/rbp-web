@@ -16,7 +16,7 @@ const TransportationSection = () => {
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
       <Container sx={{maxWidth: '6xl', pt: [4, 4, 0]}}>
-        <Styled.h1 as='h3' sx={{fontWeight: 'normal', mb: 4}}>Transporation Areas</Styled.h1>
+        <Styled.h1 as='h3' sx={{fontWeight: 'normal', mb: 4}}>Transportation Areas</Styled.h1>
         <Flex sx={{
           flexWrap: 'wrap',
           'div': {
