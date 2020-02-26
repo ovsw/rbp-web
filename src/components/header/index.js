@@ -17,7 +17,7 @@ import headerBgImage from '../../images/white-paper-bg3.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
-  const {isAlertShowing, showAlert, hideAlert} = useContext(appContext)
+  const {isAlertShowing, hideAlert} = useContext(appContext)
 
   const {alertSettings} = useStaticQuery(graphql`
     query{
@@ -41,7 +41,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       background: `url(${headerBgImage}) repeat bottom left`,
       pb: 2,
       position: 'fixed',
-      width: '110%',
+      width: '100%',
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
