@@ -1,9 +1,8 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../containers/layout'
 import MapPage from '../components/map-page'
 
-const InteractiveMap = ({data}) => <Layout><MapPage locations={data.allSanityMapMarker} /></Layout>
+const InteractiveMap = ({data}) => <MapPage locations={data.allSanityMapMarker} />
 
 export default InteractiveMap
 

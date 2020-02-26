@@ -2,8 +2,8 @@ import React from 'react'
 
 import {Global} from '@emotion/core'
 import {Layout as ThemeLayout} from 'theme-ui'
-import Header from './header'
-import Footer from './footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 //  TODO: Decide on body font
 import 'typeface-dosis'

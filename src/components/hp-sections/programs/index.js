@@ -7,7 +7,7 @@ import {Box, Flex} from '@theme-ui/components'
 import {FaPaperPlane} from 'react-icons/fa'
 
 // containers
-import SectionWithSidebar from '../../../containers/section-with-sidebar'
+import SectionWithSidebar from '../../section-with-sidebar'
 // commponents
 import ProgramItem from './program'
 

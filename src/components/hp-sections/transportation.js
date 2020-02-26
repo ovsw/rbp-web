@@ -9,7 +9,7 @@ import Img from 'gatsby-image'
 import {FaBus} from 'react-icons/fa'
 
 // containers
-import SectionWithSidebar from '../../containers/section-with-sidebar'
+import SectionWithSidebar from '../section-with-sidebar'
 
 const TransportationSection = () => {
   return (

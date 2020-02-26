@@ -277,6 +277,12 @@ module.exports = {
           }
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/containers/layout`),
+      },
+    },
   ]
 }

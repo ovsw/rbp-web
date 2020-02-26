@@ -38,6 +38,7 @@
     "gatsby-background-image": "^0.9.11",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-emotion": "^4.1.13",
+    "gatsby-plugin-layout": "^1.1.22",
     "gatsby-plugin-react-leaflet": "^2.0.11",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.3.2",

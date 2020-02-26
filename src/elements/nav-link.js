@@ -7,7 +7,7 @@ import isAbsoluteURL from 'is-absolute-url'
 export default ({to, ...props}) => {
   const isExternal = isAbsoluteURL(to)
   if (isExternal) {
-    return <a {...props} href={to} rel='noopener noreferrer' target='_blank' />
+    return <a href={to} rel='noopener noreferrer' target='_blank' />
   }
   return <Link {...props} to={to} activeClassName='active' />
 }

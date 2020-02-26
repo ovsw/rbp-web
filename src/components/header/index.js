@@ -50,7 +50,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
           <Box sx={{flex: 'flex: 1 1 0%'}}>
-            <Link to='/' sx={{variant: 'links.logoText'}}>Rambling Pines<br />Day Camp</Link>
+            <Link to='/' sx={{variant: 'links.logoText'}}>Rambling Pines<br />Day Camps</Link>
           </Box>
 
           <button sx={{variant: 'buttons.navToggle'}} onClick={showNav ? onHideNav : onShowNav}>
