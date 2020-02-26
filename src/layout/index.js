@@ -1,4 +1,5 @@
 import React from 'react'
+import {hot} from 'react-hot-loader/root'
 
 import {Global} from '@emotion/core'
 import {Layout as ThemeLayout} from 'theme-ui'
@@ -42,4 +43,4 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   </ThemeLayout>
 )
 
-export default Layout
+export default hot(Layout)
