@@ -44,7 +44,12 @@ module.exports = {
                     children: []
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Activities',
                 slug: '/activities/',
@@ -74,7 +79,7 @@ module.exports = {
             ]
           },
           {
-            title: 'column 2',
+            title: 'column 3',
             children: [
               {
                 title: 'Transportation',
@@ -92,23 +97,28 @@ module.exports = {
                 children: []
               },
               {
+                title: 'FAQs',
+                slug: '/faqs/',
+                children: []
+              }
+            ]
+          },
+          {
+            title: 'column 4',
+            children: [
+              {
                 title: 'Dates & Rates',
                 slug: '/dates-and-rates/',
                 children: []
               },
               {
+                title: 'Tuition Assistance',
+                slug: '/summer-camp-tuition-assistance/',
+                children: []
+              },
+              {
                 title: 'Reviews',
                 slug: '/reviews/',
-                children: []
-              },
-              {
-                title: 'Tuition Assistance',
-                slug: '/tuition-assistance/',
-                children: []
-              },
-              {
-                title: 'FAQs',
-                slug: '/faqs/',
                 children: []
               }
               // {
@@ -128,6 +138,11 @@ module.exports = {
             title: 'column 1',
             children: [
               {
+                title: 'Message from Our Directors',
+                slug: '/message-from-our-directors/',
+                children: []
+              },
+              {
                 title: 'Our Directors',
                 slug: '/our-directors/',
                 children: []
@@ -137,6 +152,17 @@ module.exports = {
                 slug: '/our-staff/',
                 children: []
               },
+              {
+                title: 'ACA Accreditation',
+                slug: '/aca-accreditation/',
+                children: []
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
+
               {
                 title: 'History',
                 slug: '/history/',
@@ -173,11 +199,6 @@ module.exports = {
                 slug: '/lunch-menu',
                 children: []
               },
-              // {
-              //   title: 'Camper Photo App',
-              //   slug: '/camper-photo-app/',
-              //   children: []
-              // },
               {
                 title: 'Activity Calendar',
                 slug: '/activities/calendar/',
@@ -187,7 +208,12 @@ module.exports = {
                 title: 'Camp Store',
                 slug: 'https://www.bunkline.com/category-s/602.htm',
                 children: []
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Refer A Family',
                 slug: '/refer-a-family/',
@@ -198,11 +224,6 @@ module.exports = {
                 slug: 'https://ramblingpines.campintouch.com/v2/login/login.aspx',
                 children: []
               }
-              // {
-              //   title: 'New for 2020',
-              //   slug: '/new-for-2020/',
-              //   children: []
-              // },
             ]
           }
         ]
@@ -214,6 +235,11 @@ module.exports = {
           {
             title: 'column 1',
             children: [
+              {
+                title: 'Working at Rambling Pines',
+                slug: '/staff/working-at-rambling-pines/',
+                children: []
+              },
               {
                 title: 'Current Openings',
                 slug: '/staff/current-openings/',
@@ -281,8 +307,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/containers/layout`),
-      },
-    },
+        component: require.resolve(`./src/containers/layout`)
+      }
+    }
   ]
 }

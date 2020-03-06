@@ -3,7 +3,7 @@ import {hot} from 'react-hot-loader/root'
 
 import {Global} from '@emotion/core'
 import {Layout as ThemeLayout} from 'theme-ui'
-import Header from '../components/header'
+import Header from '../components/header2'
 import Footer from '../components/footer'
 
 //  TODO: Decide on body font
