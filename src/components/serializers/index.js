@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'gatsby'
+
 import Figure from './Figure'
 import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
@@ -6,6 +8,10 @@ import Table from './Table'
 import Embed from './Embed'
 import File from './File'
 import HubSpotForm from './HubSpotForm'
+
+import isAbsoluteURL from 'is-absolute-url'
+
+import {GoLinkExternal} from 'react-icons/go'
 
 const YTopts = {
   width: '100%',
@@ -32,10 +38,13 @@ const serializers = {
   marks: {
     link: ({mark, children}) => {
       // Read https://css-tricks.com/use-target_blank/
-      const {blank, href} = mark
-      return blank
-        ? <a href={href} target='_blank' rel='noopener'>{children}</a>
-        : <a href={href}>{children}</a>
+      const {href} = mark // blank is used for checkbox
+      const isExternal = isAbsoluteURL(href)
+      if (isExternal) {
+        return <a href={href} className='externalLink' rel='noopener noreferrer' target='_blank'>{children} <GoLinkExternal /></a>
+      } else {
+        return <Link to={href}>{children}</Link>
+      }
     }
   }
 }
