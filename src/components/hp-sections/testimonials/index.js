@@ -144,32 +144,32 @@ const TestimonialsSection = () => {
 
 const testimonialsContentTemp = [
   {
-    name: 'Roger F.',
-    text: "I can attest to the quality of service this camp provides. You will get your money's worth, thanks in part to a stellar crew who give it their all. A family-run business who genuinely care about the business they've built over the years."
+    name: 'Alex Reznik',
+    text: 'This is a Great Camp!! Our children have been going to Rambling Pines since they were in Kindergarten and our oldest is now a counselor. The Camp has wonderful owners and very friendly and helpful staff. Everyone is very attentive to the children. Driving into the camp, you see the children participating in so many various activities. There is something amazing about growing up with summers at Ramblings Pines, making great friends, and then working at the camp. Our boys have so many memories at Rambling Pines and they look forward to going back every Summer.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Kenneth Kim',
+    text: 'This is a Great Camp!! Our children have been going to Rambling Pines since they were in Kindergarten and our oldest is now a counselor. The Camp has wonderful owners and very friendly and helpful staff. Everyone is very attentive to the'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'David Shapiro',
+    text: 'My daughter went to multiple camps in the Princeton/Pennington, area, and year after year enjoyed them, but was never fully satisfied. Then she went to Rambling Pines. The environment they provided for her was incredible! She loved it. It was the only camp she actually asked us to extended her time there for the following season. The Jordan family are committed to providing their campers a really fun and engaging time, with a lot of activities, in a very well maintained camp setting. 5 Star Ratings. I highly recommend. Thanks.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Ellana Sulla',
+    text: 'My Daughter started going to this camp 3 years ago. She was 6 years old was very hesitant because she didn’t know anyone.  The staff starting from the bus driver at pick up to the bus  counselor and camp counselor where amazing.   She camp home her first day and loved it.  Everyone there is warm accommodating and friendly.  You can see and feel they all love what they do. All the way up  to the owners.   What else can a parent want.'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Amy O\'Donnell',
+    text: 'My first grade daughter will be spending her 4th summer at Rambling Pines, and we couldn\'t be happier!  There are so many reasons that we love his camp: the bus service that picks her up at our door,  the awesome facilities (including 2 pools, mini golf, large indoor gym, arts room, horses etc.),  the very high staff to child ratio, the kind and creative staff, the yummy kid-oriented lunches and snacks, and so much more.  My daughter comes back every day with a smile on her face, ready to tell me all her adventures, and in my opinion that is what summer should be!'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Suzan Milman',
+    text: 'I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.  Even my most introverted child can’t wait to get back the very next day!'
   },
   {
-    name: 'Suzan M.',
-    text: ' I find Rambling Pines to be a very nurturing and supportive environment for our children. I have always felt that my children are in safe and loving hands when they are at this camp. My three kids always come off the bus with a smile on their faces and some exciting story to share.'
+    name: 'Nicole Klein',
+    text: 'I\'m in my 30\'s and remember my own fun summers at Rambling Pines. Both my children go there (3 & 7) and they absolutely love it.  They come home with huge smiles on their faces [...] The bus service is a huge bonus for me as the pick and and drop off door to door.  This camp is family run and a has great professional staff that keep parents aware of what is going on. I never had anything but good experiences with the enthusiastic councelors. I know my kids are safe there and the nurse is very attentive.'
   }
 ]
 
