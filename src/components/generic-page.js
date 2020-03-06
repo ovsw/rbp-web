@@ -100,7 +100,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
       }
 
       <section sx={{variant: 'sections.hpSectionLight'}}>
-        <Container sx={{maxWidth: '6xl', p: 4, py: [4, 5]}}s>
+        <Container sx={{maxWidth: '6xl', px: [2, 2, 4], py: [4, 5]}}s>
           {/* <Styled.root> */}
           <Flex sx={{flexWrap: 'wrap', flexDirection: 'row-reverse'}}>
             <Box sx={{width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
@@ -108,7 +108,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
                 <PageSideNav section={section} />
               </div>
               <div sx={{variant: 'styles', mb: 5}} role='main'>
-                <div sx={{marginBottom: 4}} >
+                <div sx={{mb: 4}} >
                   <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
                 </div>
                 {_rawBody && <PortableText blocks={_rawBody} />}
