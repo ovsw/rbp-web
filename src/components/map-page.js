@@ -6,7 +6,7 @@ import {jsx} from 'theme-ui'
 import {Map, Marker, ImageOverlay, Tooltip} from 'react-leaflet'
 import L from 'leaflet'
 
-import mapimage from '../images/rambling-pines-day-camp-map-2.jpg'
+import mapimage from '../images/rambling-pines-day-camp-map.jpg'
 import emptyIcon from '../images/px.png'
 
 import 'leaflet/dist/leaflet.css'
