@@ -24,12 +24,13 @@ const TransportationSection = () => {
             mb: [4, 4, 0],
             width: ['full', '1/3', '1/5'],
             'ul': {
+              variant: 'lists.reset',
               color: 'gray.3',
               mt: 3,
               ml: '0',
               borderLeft: '2px solid',
               borderColor: 'accent',
-              pl: '20px'
+              pl: '10px'
             },
             'li': {
               ml: 2,
