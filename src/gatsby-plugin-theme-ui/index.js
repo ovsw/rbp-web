@@ -288,6 +288,23 @@ export default {
       ':hover': {
         'textDecoration': 'underline',
         'color': 'primary'
+      },
+      '&.contentButton': {
+        ...sharedButtonStyles,
+        display: 'inline-block',
+        'backgroundColor': 'accent',
+        'border': 'none',
+        mb: 3,
+        'borderBottomWidth': '4px',
+        'borderBottomStyle': 'solid',
+        'borderBottomColor': 'accentDark',
+        'color': 'primary',
+        'fontWeight': 'bold',
+        'borderRadius': 'default',
+        'transition': 'transform 0.3s ease-in-out',
+        '&:hover': {
+          'transform': 'translateY(-1px)'
+        }
       }
     },
     'p': {
