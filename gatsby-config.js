@@ -177,11 +177,6 @@ module.exports = {
                 title: 'Directions',
                 slug: '/directions/',
                 children: []
-              },
-              {
-                title: 'ACA Accreditation',
-                slug: '/aca-accreditation/',
-                children: []
               }
             ]
           }
