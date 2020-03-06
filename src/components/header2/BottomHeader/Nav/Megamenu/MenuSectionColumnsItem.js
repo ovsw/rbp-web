@@ -12,7 +12,10 @@ const MenuSectionColumnsItem = ({items, onNavClick}) => {
   return (
     <ul sx={{
       variant: 'lists.reset',
-      mx: [null, null, null, 3]
+      mx: [null, null, null, 3],
+      'a:hover': {
+        color: 'primary'
+      }
     }}>
       {/* ^ keep quiet on mobile, on desktop we need space between the columns */}
       {items.map(item => (
