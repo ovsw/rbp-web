@@ -42,7 +42,7 @@ const MobileMainReplacement = props => {
           display: 'none!important'
         }
       }}>
-        <a href='mailto:info@camplaurelwood.com' title='Email Us'>
+        <a href='mailto:info@ramblingpines.com' title='Email Us'>
           <span> <FiMail /> Email Us</span>
         </a>
       </li>
