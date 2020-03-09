@@ -117,7 +117,7 @@ class MenuSection extends React.Component {
             // backgroundSize: '300px 200px',
             // positioning
             position: [null, null, null, 'absolute'],
-            top: ['0px', null, null, '3.5rem'], //  FYI: 6.85 is the limit at which there's no space between this and the triggering parent
+            top: ['0px', null, null, '3.45rem'], //  FYI: 6.85 is the limit at which there's no space between this and the triggering parent
             right: '0',
             // sizing
             width: [null, null, null, '100%'],
