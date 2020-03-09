@@ -11,6 +11,7 @@ const clientConfig = require('./client-config')
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.ramblingpines.com',
     siteNav: [
       {
         title: 'Future Families',
@@ -283,6 +284,32 @@ module.exports = {
         overlayDrafts: true
       }
     },
+    `gatsby-plugin-netlify-headers`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Camp Laurelwood - Connecticut's Premier Jewish Summer Camp`,
+        short_name: `Camp Laurelwood`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#008080`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+        // icons: [
+        //   {
+        //     src: '/favicons/android-chrome-192x192.png',
+        //     sizes: '192x192',
+        //     type: 'image/png'
+        //   },
+        //   {
+        //     src: '/favicons/android-chrome-512x512.png',
+        //     sizes: '512x512',
+        //     type: 'image/png'
+        //   }
+        // ]
+      }
+    },
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -303,6 +330,16 @@ module.exports = {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/containers/layout`)
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-990695-1',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true
+      // sampleRate: 5,
+      // siteSpeedSampleRate: 10
       }
     }
   ]
