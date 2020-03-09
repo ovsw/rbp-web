@@ -131,7 +131,7 @@ class MenuSection extends React.Component {
               // bg: 'red',
               pb: '12px',
               '&:hover': {
-                color: 'accent'
+                color: 'primary'
               }
             }
           }}>
