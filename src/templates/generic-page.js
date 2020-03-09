@@ -8,14 +8,14 @@ import GenericPage from '../components/generic-page'
 // import {toPlainText} from '../lib/helpers'
 
 const GenericPageTemplate = props => {
-  const {data, errors, location} = props
+  const {data, errors} = props // location
   const page = data && data.page
   const section = data && (data.page.section || 'Future Families')
 
   return (
     <>
       {errors && <SEO seoTitle='GraphQL Error' />}
-      {page && <SEO seoTitle={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} />}
+      {page && <SEO title={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} image={page.headerImage} />}
 
       {errors && (
         <>

@@ -29,6 +29,8 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
+  const ogImage = (data || {}).ogImage
+
   // const postNodes = (data || {}).posts
   //   ? mapEdgesToNodes(data.posts)
   //     .filter(filterOutDocsWithoutSlugs)
@@ -46,7 +48,7 @@ const IndexPage = props => {
       <SEO
         title={site.title}
         description={site.description}
-        keywords={site.keywords}
+        image={ogImage.headerImage}
       />
       <Hero />
       <Transportation />
@@ -96,6 +98,12 @@ export const query = graphql`
       title
       description
       keywords
+    }
+    ogImage: sanityPage(_id: { regex: "/(drafts.|)workingAtRBP/" }) {
+      headerImage {
+        ...SanityImageMeta
+        alt
+      }
     }
     posts: allSanityPost(
       limit: 1

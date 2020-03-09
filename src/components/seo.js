@@ -6,13 +6,13 @@ import {imageUrlFor} from '../lib/image-url'
 import {buildImageObj} from '../lib/helpers'
 // import config from '../../config/website'
 
-function SEO ({description, lang, meta, keywords, title, image}) {
+function SEO ({description, lang, meta, title, image}) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription = description || (data.site && data.site.description) || ''
-        const siteTitle = (data.site && data.site.title) || ''
+        const siteTitle = (data.site && data.site.title) || 'Rambling Pines Day Camp'
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
         const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : ''
 
@@ -59,14 +59,6 @@ function SEO ({description, lang, meta, keywords, title, image}) {
                 content: metaDescription
               }
             ]
-              .concat(
-                keywords && keywords.length > 0
-                  ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
-                  : []
-              )
               .concat(meta)}
           />
         )
@@ -77,15 +69,13 @@ function SEO ({description, lang, meta, keywords, title, image}) {
 
 SEO.defaultProps = {
   lang: 'en',
-  meta: [],
-  keywords: []
+  meta: []
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string
 }
 
@@ -96,10 +86,6 @@ const detailsQuery = graphql`
     site: sanitySiteSettings(_id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}) {
       title
       description
-      keywords
-      author {
-        name
-      }
     }
   }
 `
