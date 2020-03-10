@@ -88,6 +88,11 @@ module.exports = {
                 children: []
               },
               {
+                title: 'Interactive Map',
+                slug: '/interactive-map/',
+                children: []
+              },
+              {
                 title: 'Lunch',
                 slug: '/lunch/',
                 children: []
@@ -163,7 +168,11 @@ module.exports = {
           {
             title: 'column 2',
             children: [
-
+              {
+                title: 'Interactive Map',
+                slug: '/interactive-map/',
+                children: []
+              },
               {
                 title: 'History',
                 slug: '/history/',
