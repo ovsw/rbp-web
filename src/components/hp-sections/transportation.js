@@ -79,7 +79,7 @@ const TransportationSection = () => {
               <li><span>East Amwell</span></li>
               <li><span>Flemington</span></li>
               <li><span>Lambertville</span></li>
-              <li><span>Sergeantville</span></li>
+              <li><span>Sergeantsville</span></li>
               <li><span>Stockton</span></li>
               <li><span>West Amwell</span></li>
             </ul>
