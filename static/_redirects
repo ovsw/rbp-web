@@ -1,4 +1,5 @@
 https://rbp-app.netlify.com/* https://www.ramblingpines.com/:splat 301!
+https://rbp-app.netlify.app/* https://www.ramblingpines.com/:splat 301!
 
 /about/     /history/
 /about/message-from-our-directors/      /message-from-our-directors/
