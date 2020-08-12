@@ -324,15 +324,15 @@ module.exports = {
       options: {
         host: 'https://www.ramblingpines.com',
         sitemap: 'https://www.ramblingpines.com/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{userAgent: '*', disallow: ['/']}]
-          },
-          production: {
-            policy: [{userAgent: '*', disallow: '/'}]
-          }
-        }
+        resolveEnv: () => process.env.GATSBY_ENV
+        // env: {
+        //   production: {
+        //     policy: [{userAgent: '*', disallow: ['/']}]
+        //   },
+        //   production: {
+        //     policy: [{userAgent: '*', disallow: '/'}]
+        //   }
+        // }
       }
     },
     {
