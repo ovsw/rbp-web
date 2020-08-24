@@ -14,9 +14,9 @@ const Column1 = () => {
       {/* MOBILE ONLY */}
       <div className='mobile-menu' sx={{display: ['block', null, null, 'none'], a: {fontSize: ['0.8rem', 1], lineHeight: 2}}}>
         <ul sx={{variant: 'lists.reset', display: 'flex', justifyContent: 'space-between', li: {display: 'inline-block'}}}>
-          {/*<li>*/}
-          {/*  <Link to='/dates-and-rates/' title='Dates &amp; Rates'><span>Dates &amp; Rates</span></Link>*/}
-          {/*</li>*/}
+          <li>
+            <Link to='/dates-and-rates/' title='Dates &amp; Rates'><span>Dates &amp; Rates</span></Link>
+          </li>
           <li>
             <a href='https://ramblingpines.campintouch.com/ui/forms/application/camper/App' title='Enroll Now' rel='noopener noreferrer' target='_blank'><span> Enroll Now</span></a>
           </li>
@@ -27,9 +27,9 @@ const Column1 = () => {
       {/* DESKTOP ONLY */}
       <div sx={{display: ['none', null, null, 'block']}}>
         <ul sx={{variant: 'lists.reset', li: {display: 'inline-block'}}}>
-          {/*<li>*/}
-          {/*  <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>*/}
-          {/*</li>*/}
+          <li>
+            <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>
+          </li>
           <li>
             <Link to='/interactive-map/' sx={{variant: 'links.topBar'}}>Interactive Map</Link>
           </li>
