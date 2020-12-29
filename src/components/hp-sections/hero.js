@@ -6,7 +6,7 @@ import {Box} from '@theme-ui/components'
 import ModalVideo from 'react-modal-video'
 import HeroVideoBg from './hero-video-bg'
 
-import {FaPlay} from 'react-icons/fa'
+import {FaPlay, FaCalendar} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 import BigLogo from '../../images/rambling-pines-art-logo.png'
@@ -16,7 +16,7 @@ import '../../../node_modules/react-modal-video/css/modal-video.min.css'
 const Hero = () => {
   const [playFullVideo, setPlayFullVideo] = useState(false)
   return (
-    <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} mt={5} sx={{
+    <Box as='section' pt={[6, 5, 5, 5, 6]} pb={[4, 5, 5, 6]} mt={5} sx={{
       textAlign: 'center',
       borderBottom: '1px solid lightgrey',
       position: 'relative',
@@ -24,8 +24,7 @@ const Hero = () => {
       bg: 'primaryLight',
       backgroundImage: `url('${VideoPoster}')`,
       backgroundSize: 'cover',
-      backgroundPosition: 'top right',
-      minHeight: ['auto', 'auto', 'auto', 'calc(100vh - 130px)']
+      backgroundPosition: 'top right'
     }} className='Hero'>
       <div sx={{
         bg: 'rgba(0,0,0,.3)',
@@ -75,15 +74,19 @@ const Hero = () => {
           mt: 0
         }}>Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
 
-        <button onClick={() => setPlayFullVideo(true)} sx={{
-          variant: 'buttons.3DAccent',
-          display: 'inline-block',
-          py: 3,
-          mt: 4
-        }}>
-          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Full Video
-        </button>
-        <ModalVideo autoplay='1' isOpen={playFullVideo} videoId='5rbAeDbueSA' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
+        <div sx="display: 'flex', flexWrap: 'wrap', justifyContent: 'center'">
+          <button onClick={() => setPlayFullVideo(true)} sx={{
+            variant: 'buttons.3D',
+            display: 'inline-block',
+            py: 3,
+            mt: 4,
+            mr: 3
+          }}>
+            <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Full Video
+          </button>
+          <ModalVideo autoplay='1' isOpen={playFullVideo} videoId='5rbAeDbueSA' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
+          <a sx={{variant: 'buttons.3DAccent', display: 'inline-block'}} href="https://calendly.com/ramblingpines/camp-tour" target="_blank"><FaCalendar sx={{position: 'relative', top: '2px'}} />  Schedule a Tour</a>
+        </div>
       </Container>
     </Box>
   )
