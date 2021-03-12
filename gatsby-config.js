@@ -341,15 +341,15 @@ module.exports = {
         component: require.resolve(`./src/containers/layout`)
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-990695-1',
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true
-      // sampleRate: 5,
-      // siteSpeedSampleRate: 10
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-990695-1',
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: true
+    //   // sampleRate: 5,
+    //   // siteSpeedSampleRate: 10
+    //   }
+    // }
   ]
 }
