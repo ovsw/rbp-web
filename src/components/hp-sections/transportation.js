@@ -65,6 +65,7 @@ const TransportationSection = () => {
             <Styled.h4>Somerset County:</Styled.h4>
             <ul>
               <li><span>Belle Mead</span></li>
+              <li><span>Branchburg</span></li>
               <li><span>Hillsborough</span></li>
               <li><span>Neshanic</span></li>
               <li><span>Rocky Hill</span></li>
@@ -79,6 +80,7 @@ const TransportationSection = () => {
               <li><span>East Amwell</span></li>
               <li><span>Flemington</span></li>
               <li><span>Lambertville</span></li>
+              <li><span>Readington</span></li>
               <li><span>Sergeantsville</span></li>
               <li><span>Stockton</span></li>
               <li><span>West Amwell</span></li>
