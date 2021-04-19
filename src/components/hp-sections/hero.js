@@ -120,11 +120,11 @@ const Hero = () => {
             onClose={() => setPlayFullVideo(!setPlayFullVideo)}
           />
           <a
-            sx={{ variant: "buttons.3DAccent", display: "inline-block" }}
+            sx={{ variant: "buttons.3DAccent", display: "inline-block", mr: 3 }}
             href="https://calendly.com/ramblingpines/camp-tour"
             target="_blank"
           >
-            <FaCalendar sx={{ position: "relative", top: "2px", mr: 3 }} /> Schedule a Tour
+            <FaCalendar sx={{ position: "relative", top: "2px" }} /> Schedule a Tour
           </a>
           <a
             sx={{ variant: "buttons.3D", display: "inline-block" }}
