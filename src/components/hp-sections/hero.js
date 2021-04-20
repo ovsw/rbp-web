@@ -6,7 +6,7 @@ import { Box } from "@theme-ui/components";
 import ModalVideo from "react-modal-video";
 import HeroVideoBg from "./hero-video-bg";
 
-import { FaPlay, FaCalendar } from "react-icons/fa";
+import { FaPlay, FaCalendar, FaChevronRight } from "react-icons/fa";
 
 import VideoPoster from "../../images/rambling-pines-camp-intro-video.jpg";
 import BigLogo from "../../images/rambling-pines-art-logo.png";
@@ -131,7 +131,7 @@ const Hero = () => {
             href="https://ramblingpines.campintouch.com/ui/forms/application/camper/App"
             target="_blank"
           >
-            <FaCalendar sx={{ position: "relative", top: "2px" }} /> Enroll Now
+            <FaChevronRight sx={{ position: "relative", top: "2px" }} /> Enroll Now
           </a>
         </div>
       </Container>
