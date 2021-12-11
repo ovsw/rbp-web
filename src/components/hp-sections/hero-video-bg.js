@@ -12,16 +12,16 @@ class HeroVideoBg extends React.Component {
 
   render () {
     const videoOptions = {
-      src: 'https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.mp4',
+      // src: 'https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.mp4',
+      src: 'https://www.ramblingpines.com/video/rambling-pines-camp-intro-video.mp4',
       autoPlay: true,
       loop: true,
       muted: true,
       poster: '',
       ref: videoRef => {
-        this.videoRef = videoRef
+        this.videoRef = videoRef;
       }
-
-    }
+    };
 
     return (
 
