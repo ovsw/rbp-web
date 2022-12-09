@@ -32,7 +32,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
       '.map': {
         height: '900px',
         zIndex: '1',
-        background: '#f7f7f7 !important'
+        background: '#fff !important'
       }
     })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
