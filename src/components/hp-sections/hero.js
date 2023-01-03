@@ -102,7 +102,7 @@ const Hero = () => {
           </p>
 
           <div sx="display: 'flex', flexWrap: 'wrap', justifyContent: 'center'">
-            <button
+            {/* <button
               onClick={() => setPlayFullVideo(true)}
               sx={{
                 variant: "buttons.3D",
@@ -113,7 +113,7 @@ const Hero = () => {
               }}
             >
               <FaPlay sx={{ position: "relative", top: "2px" }} /> &nbsp; Watch our Full Video
-            </button>
+            </button> */}
 
             <a
               sx={{ variant: "buttons.3DAccent", display: "inline-block", mr: 3, my: 2 }}
