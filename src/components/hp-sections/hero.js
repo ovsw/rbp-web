@@ -116,7 +116,7 @@ const Hero = () => {
             </button> */}
 
             <a
-              sx={{ variant: "buttons.3DAccent", display: "inline-block", mr: 3, my: 2 }}
+              sx={{ variant: "buttons.3D", display: "inline-block", mr: 3, my: 2 }}
               href="/staff/current-openings/"
               target="_blank"
             >
