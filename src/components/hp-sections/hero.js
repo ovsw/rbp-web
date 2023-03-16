@@ -6,7 +6,7 @@ import { Box } from "@theme-ui/components";
 import ModalVideo from "react-modal-video";
 import HeroVideoBg from "./hero-video-bg";
 
-import { FaPlay, FaCalendar, FaChevronRight } from "react-icons/fa";
+import { FaPlay, FaCalendar, FaChevronRight, FaUser  } from "react-icons/fa";
 
 import VideoPoster from "../../images/rambling-pines-camp-intro-video.jpg";
 import BigLogo from "../../images/rambling-pines-art-logo.png";
@@ -114,6 +114,14 @@ const Hero = () => {
             >
               <FaPlay sx={{ position: "relative", top: "2px" }} /> &nbsp; Watch our Full Video
             </button> */}
+
+            <a
+              sx={{ variant: "buttons.3DAccent", display: "inline-block", mr: 3, my: 2 }}
+              href="/staff/current-openings/"
+              target="_blank"
+            >
+              <FaUser sx={{ position: "relative", top: "2px" }} /> Work at Camp
+            </a>
 
             <a
               sx={{ variant: "buttons.3DAccent", display: "inline-block", mr: 3, my: 2 }}
