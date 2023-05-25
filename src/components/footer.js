@@ -22,7 +22,7 @@ const Footer = () => {
               <div className='tel'>
                 Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:609-466-1212'>(609) 466-1212</a>
               </div>
-              <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:campinfo@ramblingpines.com'>campinfo@ramblingpines.com</a>
+              <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:info@ramblingpines.com'>info@ramblingpines.com</a>
               <div className='adr' sx={{mt: 4}}>
                 <div className='street-address'>174 Lambertville Hopewell Rd.</div>
                 <span className='locality'>Hopewell</span>,{' '}
