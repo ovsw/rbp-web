@@ -1,5 +1,4 @@
 // /** @jsx jsx */
-import React from 'react' // eslint-disable-line
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
@@ -15,7 +14,7 @@ const MainQuickLinks = () => {
             <ul>
               <li>
 
-                <a href='/' onClick="olark('api.box.expand')" title='title=' speak='speak with a director'>
+                <a href='/' title='Speak with a director'>
                   <h2>SPEAK</h2>
                   <h5>WITH A DIRECTOR</h5>
                 </a>

@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React, { useState } from 'react' // eslint-disable-line
+import { useState } from 'react'
 
-import {jsx, Styled} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 // import {Box, Flex} from '@theme-ui/components'
-import Img from 'gatsby-image'
 
 import PortableText from './portableText'
 
@@ -32,15 +32,22 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
       zIndex: 11,
       pt: '127px'
     }}>
-      <div onClick={closeLightBox} sx={{
+      <button
+        type='button'
+        onClick={closeLightBox}
+        aria-label='Close map lightbox'
+        sx={{
         position: 'absolute',
         top: '0',
         bottom: '0',
         left: '0',
         right: '0',
         background: 'rgba(15, 31, 5, 0.62)',
-        zIndex: '11'
-      }} />
+        zIndex: '11',
+        border: 'none',
+        p: 0
+      }}
+      />
       <div sx={{
         bg: 'white',
         borderRadius: 'default',
@@ -52,25 +59,37 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
         width: ['95%', '95%', '700px', '800px', '1000px'],
         zIndex: '12'
       }}>
-        <Img fluid={images[activeImage].asset.large} sx={{
-          width: ['100%', '100%', '1/2'],
-          backgroundImage: `url('${LoaderImage}')`,
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '0.25rem  0 0 0.25rem'
-          // border: '1px solid #006600'
-        }} />
-        <div onClick={closeLightBox} sx={{
+        <img
+          src={images[activeImage].asset.url}
+          alt={images[activeImage].alt || title}
+          sx={{
+            width: ['100%', '100%', '1/2'],
+            objectFit: 'cover',
+            backgroundImage: `url('${LoaderImage}')`,
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            borderRadius: '0.25rem  0 0 0.25rem'
+          }}
+        />
+        <button
+          type='button'
+          onClick={closeLightBox}
+          aria-label='Close map lightbox'
+          sx={{
           position: 'absolute',
           cursor: 'pointer',
           color: 'primary',
           bottom: '1rem',
           right: '0.75rem',
           top: '0.65rem',
-          fontSize: '2rem'
-        }}>
+          fontSize: '2rem',
+          border: 'none',
+          bg: 'transparent',
+          p: 0
+        }}
+        >
           <FaTimesCircle />
-        </div>
+        </button>
         <div sx={{
           width: ['auto', 'auto', '1/2'],
           p: 4,
@@ -92,20 +111,22 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
           </div>
           <div sx={{display: 'flex', flexWrap: 'wrap', mt: 4}}>
             {images.map((image, index) => (
-              <a
-                url={image.url}
-                key={image.url}
-                role='button'
-                tabIndex={0}
+              <button
+                type='button'
+                key={image.asset.url}
                 onClick={e => getCurrImage(e, index)}
-                onKeyUp={e => getCurrImage(e, index)}
+                sx={{border: 'none', bg: 'transparent', p: 0}}
               >
-                <Img fluid={image.asset.thumb} sx={{
-                  width: ['3rem', '3rem', '3rem', '3rem', '4rem'],
-                  m: '1px',
-                  cursor: 'pointer'
-                }} />
-              </a>
+                <img
+                  src={image.asset.url}
+                  alt={image.alt || title}
+                  sx={{
+                    width: ['3rem', '3rem', '3rem', '3rem', '4rem'],
+                    m: '1px',
+                    cursor: 'pointer'
+                  }}
+                />
+              </button>
             ))}
           </div>
         </div>

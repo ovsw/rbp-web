@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container, Footer as ThemeFooter} from 'theme-ui'
+import {jsx, Container} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import {Box, Flex} from '@theme-ui/components'
 import {Link} from 'gatsby'
 
@@ -13,7 +14,7 @@ import FooterBg from '../images/footer-bg-2.jpg'
 
 const Footer = () => {
   return (
-    <ThemeFooter sx={{display: 'block', background: `url(${FooterBg}) repeat-x center center`, color: 'textMuted'}}>
+    <footer sx={{display: 'block', background: `url(${FooterBg}) repeat-x center center`, color: 'textMuted'}}>
       <Container>
         <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5, 6], pb: [2, 3, null, null, 4]}}>
           <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
@@ -56,7 +57,7 @@ const Footer = () => {
         |
         Website by <a href='https://ovswebsites.com' sx={{color: '#f36'}}>OVS Websites</a>
       </div>
-    </ThemeFooter>
+    </footer>
   )
 }
 

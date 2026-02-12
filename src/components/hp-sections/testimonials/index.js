@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container} from 'theme-ui'
+import {jsx, Container} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import Slider from 'react-slick'
 
 import TestimonialItem from './testimonial-item'
@@ -13,9 +13,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import SectionBg from '../../../images/img-bg-2.png'
 
 function NextArrow (props) {
-  const {className, style, onClick} = props
+  const {className, onClick} = props
   return (
-    <div
+    <button
+      type='button'
+      aria-label='Next testimonials'
       className={className}
       // style={{...style}}
       onClick={onClick}
@@ -31,9 +33,11 @@ function NextArrow (props) {
 }
 
 function PrevArrow (props) {
-  const {className, style, onClick} = props
+  const {className, onClick} = props
   return (
-    <div
+    <button
+      type='button'
+      aria-label='Previous testimonials'
       // style={{...style}}
       className={className}
       sx={{

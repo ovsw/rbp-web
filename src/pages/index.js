@@ -29,8 +29,6 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const ogImage = (data || {}).ogImage
-
   // const postNodes = (data || {}).posts
   //   ? mapEdgesToNodes(data.posts)
   //     .filter(filterOutDocsWithoutSlugs)
@@ -45,11 +43,6 @@ const IndexPage = props => {
 
   return (
     <>
-      <SEO
-        title={site.title}
-        description={site.description}
-        image={ogImage.headerImage}
-      />
       <Hero />
       <Transportation />
       <Programs />
@@ -69,6 +62,19 @@ const IndexPage = props => {
 }
 
 export default IndexPage
+
+export const Head = ({data}) => {
+  const site = (data || {}).site
+  const ogImage = (data || {}).ogImage
+
+  return (
+    <SEO
+      title={site && site.title}
+      description={site && site.description}
+      image={ogImage && ogImage.headerImage}
+    />
+  )
+}
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -107,7 +113,7 @@ export const query = graphql`
     }
     posts: allSanityPost(
       limit: 1
-      sort: { fields: [publishedAt], order: DESC }
+      sort: { publishedAt: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {

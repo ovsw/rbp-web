@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 
 const TestimonialItem = ({name = 'missing name', text = 'missing content'}) => {
   return (

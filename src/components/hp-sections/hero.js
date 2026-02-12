@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React, { useState } from "react"; // eslint-disable-line
-import { Link } from "gatsby";
-import { Container, jsx, Styled } from "theme-ui";
+import { useState } from "react";
+import { Container, jsx } from "theme-ui";
+import { Themed as Styled } from "@theme-ui/mdx";
 import { Box } from "@theme-ui/components";
 import ModalVideo from "react-modal-video";
 import HeroVideoBg from "./hero-video-bg";
 
-import { FaPlay, FaCalendar, FaChevronRight, FaUser  } from "react-icons/fa";
+import { FaCalendar, FaChevronRight, FaUser } from "react-icons/fa";
 
 import VideoPoster from "../../images/rambling-pines-camp-intro-video.jpg";
 import BigLogo from "../../images/rambling-pines-art-logo.png";
@@ -19,9 +19,9 @@ const Hero = () => {
     <div>
       <Box
         as="section"
-        pt={[6, 5, 5, 5, 6]}
-        pb={[4, 5, 5, 6]}
-        mt={5}
+        pt={6}
+        pb={6}
+        mt={6}
         sx={{
           textAlign: "center",
           borderBottom: "1px solid lightgrey",
@@ -57,10 +57,7 @@ const Hero = () => {
             zIndex: 0
           }}
         >
-          <HeroVideoBg
-            playFullVideo={playFullVideo}
-            poster="https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg"
-          />
+          <HeroVideoBg />
         </div>
         <Container
           className="container"

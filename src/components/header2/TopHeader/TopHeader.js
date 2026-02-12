@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useContext} from 'react' // eslint-disable-line
+import {useContext} from 'react'
 import {jsx} from 'theme-ui'
 import {useStaticQuery, graphql} from 'gatsby'
 // import {jsx, Container, Styled} from 'theme-ui'
@@ -17,7 +17,7 @@ const TopHeader = () => {
   /// ////////////////////
   const {alertSettings} = useStaticQuery(graphql`
   query{
-    alertSettings: sanitySiteSettings(id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}){
+    alertSettings: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}){
       alertToggle
       _rawAlertText
     }
@@ -39,7 +39,7 @@ const TopHeader = () => {
         py: 1
       }
     }}>
-      {alertSettings.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
+      {alertSettings?.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
 
       <div className='container-fluid'>
         <div sx={{display: 'flex', pt: [0, null, null, 3], pb: '1'}}>

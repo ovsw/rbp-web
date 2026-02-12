@@ -1,11 +1,19 @@
-// Load variables from `.env` as soon as possible
+// Load variables from `.env` as soon as possible.
+// Prefer the env-specific file and fall back to development for local builds.
+const fs = require("fs");
+const nodeEnv = process.env.NODE_ENV || "development";
+const envFilePath = `.env.${nodeEnv}`;
+const fallbackEnvFilePath = ".env.development";
+
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "development"}`
+  path: fs.existsSync(envFilePath) ? envFilePath : fallbackEnvFilePath
 });
 
 const path = require(`path`);
 
 const clientConfig = require("./client-config");
+const isDevelop = process.env.NODE_ENV === "development";
+const hasSanityToken = Boolean(process.env.SANITY_READ_TOKEN);
 
 // const isProd = process.env.NODE_ENV === 'production'
 
@@ -275,6 +283,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-react-leaflet",
       options: {
@@ -283,14 +292,13 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-theme-ui",
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-sanity",
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
-        watchMode: true,
-        overlayDrafts: true
+        watchMode: isDevelop,
+        overlayDrafts: isDevelop && hasSanityToken
       }
     },
     `gatsby-plugin-netlify-headers`,
@@ -344,7 +352,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        //ODLDID id: "G-JQ15EPM0ZZ",
+        // ODLDID id: "G-JQ15EPM0ZZ",
         
         id: "GTM-PGMWV3V",
         // Include GTM in development.

@@ -1,11 +1,8 @@
-const {isFuture} = require('date-fns')
 /**
  * Implement Gatsby's Node APIs in this file.
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
-const {format} = require('date-fns')
 
 async function createGenericPages (graphql, actions, reporter) {
   const {createPage} = actions
@@ -31,7 +28,7 @@ async function createGenericPages (graphql, actions, reporter) {
   const pageEdges = (result.data.allSanityPage || {}).edges || []
 
   pageEdges
-    .forEach((edge, index) => {
+    .forEach(edge => {
       const {id, slug = {}} = edge.node
       const path = `/${slug.current}/`
 

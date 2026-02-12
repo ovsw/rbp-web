@@ -15,7 +15,7 @@ import MobileMenuToggle from './Mobile/MobileMenuToggle'
 
 import {appContext} from '../../../../context'
 
-const Nav = ({menuSections}) => {
+const Nav = () => {
   const {siteNav} = useSiteMetadata()
   const {isMobileNavOpen, isAlertShowing} = useContext(appContext)
 

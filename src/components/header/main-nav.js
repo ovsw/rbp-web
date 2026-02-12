@@ -37,7 +37,7 @@ const MainNav = ({navStructure, showNav}) => {
           display: ['block', 'block', 'flex'],
           justifyContent: 'flex-end'
         }}>
-          {navStructure.map((mainMenuItem, i) => {
+          {navStructure.map(mainMenuItem => {
             return (
               <MobileMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
             )

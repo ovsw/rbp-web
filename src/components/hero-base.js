@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
-import {Container, jsx, Styled} from 'theme-ui'
+import {Container, jsx} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import {Box, Flex} from '@theme-ui/components'
 
 const Hero = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
                 {/* <p>Please Contact Us Using the Form Below</p> */}
               </div>
 
-              <iframe src='https://services.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg?id=156' style={{position: 'relative', minWidth: '100%', width: '100%'}} frameBorder='0' scrolling='yes' seamless='seamless' height='319' width='100%' />
+              <iframe title='Contact form' src='https://services.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg?id=156' style={{position: 'relative', minWidth: '100%', width: '100%'}} frameBorder='0' scrolling='yes' seamless='seamless' height='319' width='100%' />
               <script src='https://services.cognitoforms.com/scripts/embed.js' />
 
             </div>

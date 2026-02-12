@@ -27,7 +27,7 @@ const PageSidebar = ({section}) => {
 
   let sideMenuItems = []
 
-  currentSectionMenuColumns.map((column, i) => {
+  currentSectionMenuColumns.map(column => {
     sideMenuItems = sideMenuItems.concat(column.children)
   })
 
