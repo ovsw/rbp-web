@@ -45,11 +45,6 @@ const IndexPage = props => {
 
   return (
     <>
-      <SEO
-        title={site.title}
-        description={site.description}
-        image={ogImage.headerImage}
-      />
       <Hero />
       <Transportation />
       <Programs />
@@ -69,6 +64,19 @@ const IndexPage = props => {
 }
 
 export default IndexPage
+
+export const Head = ({data}) => {
+  const site = (data || {}).site
+  const ogImage = (data || {}).ogImage
+
+  return (
+    <SEO
+      title={site && site.title}
+      description={site && site.description}
+      image={ogImage && ogImage.headerImage}
+    />
+  )
+}
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {

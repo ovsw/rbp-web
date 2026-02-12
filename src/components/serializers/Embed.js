@@ -1,17 +1,13 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import {Script} from 'gatsby'
 
 export default ({node}) => (
   <>
     {node.cognitoForm && (
-      <Helmet>
-        <script src='https://services.cognitoforms.com/scripts/embed.js' />
-      </Helmet>
+      <Script src='https://services.cognitoforms.com/scripts/embed.js' strategy='post-hydrate' />
     )}
     {node.embedSocial && (
-      <Helmet>
-        <script src='https://embedsocial.com/embedscript/ri.js' />
-      </Helmet>
+      <Script src='https://embedsocial.com/embedscript/ri.js' strategy='post-hydrate' />
     )}
     <div dangerouslySetInnerHTML={{__html: node.code}} />
   </>

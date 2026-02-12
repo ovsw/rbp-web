@@ -103,7 +103,7 @@ export default {
     'black': '#282828',
     'transparent': 'transparent',
     'gray': [
-      null,
+      '#f7fafc',
       '#f7fafc',
       '#edf2f7',
       '#e2e8f0',

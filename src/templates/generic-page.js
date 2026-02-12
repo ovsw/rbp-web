@@ -14,9 +14,6 @@ const GenericPageTemplate = props => {
 
   return (
     <>
-      {errors && <SEO seoTitle='GraphQL Error' />}
-      {page && <SEO title={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} image={page.headerImage} />}
-
       {errors && (
         <>
           <GraphQLErrorList errors={errors} />
@@ -28,6 +25,26 @@ const GenericPageTemplate = props => {
 }
 
 export default GenericPageTemplate
+
+export const Head = ({data, errors}) => {
+  const page = data && data.page
+
+  if (errors) {
+    return <SEO title='GraphQL Error' />
+  }
+
+  if (!page) {
+    return <SEO title='Untitled' />
+  }
+
+  return (
+    <SEO
+      title={page.seoTitle || page.title || 'Untitled'}
+      description={page.seoDescription || ''}
+      image={page.headerImage}
+    />
+  )
+}
 
 export const query = graphql`
 

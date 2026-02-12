@@ -286,7 +286,6 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-theme-ui",
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-sanity",
       options: {

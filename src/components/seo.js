@@ -1,69 +1,63 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import {StaticQuery, graphql} from 'gatsby'
+import {graphql, useStaticQuery} from 'gatsby'
 import {imageUrlFor} from '../lib/image-url'
 import {buildImageObj} from '../lib/helpers'
 // import config from '../../config/website'
 
 function SEO ({description, lang, meta, title, image}) {
-  return (
-    <StaticQuery
-      query={detailsQuery}
-      render={data => {
-        const metaDescription = description || (data.site && data.site.description) || ''
-        const siteTitle = (data.site && data.site.title) || 'Rambling Pines Day Camp'
-        const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
-        const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : ''
+  const data = useStaticQuery(detailsQuery)
+  const metaDescription = description || (data.site && data.site.description) || ''
+  const siteTitle = (data.site && data.site.title) || 'Rambling Pines Day Camp'
+  const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : ''
+  const resolvedTitle = title || siteTitle
+  const fullTitle = resolvedTitle === siteTitle ? resolvedTitle : `${resolvedTitle} | ${siteTitle}`
+  const metaTags = [
+    {
+      name: 'description',
+      content: metaDescription
+    },
+    {
+      property: 'og:title',
+      content: resolvedTitle
+    },
+    {
+      property: 'og:description',
+      content: metaDescription
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:image',
+      content: metaImage
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      name: 'twitter:title',
+      content: resolvedTitle
+    },
+    {
+      name: 'twitter:description',
+      content: metaDescription
+    }
+  ]
+    .concat(meta)
+    .filter(tag => Boolean(tag && tag.content))
 
-        return (
-          <Helmet
-            htmlAttributes={{lang}}
-            title={title}
-            titleTemplate={title === siteTitle ? '%s' : `%s | ${siteTitle}`}
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription
-              },
-              {
-                property: 'og:title',
-                content: title
-              },
-              {
-                property: 'og:description',
-                content: metaDescription
-              },
-              {
-                property: 'og:type',
-                content: 'website'
-              },
-              {
-                property: 'og:image',
-                content: metaImage
-              },
-              {
-                name: 'twitter:card',
-                content: 'summary'
-              },
-              {
-                name: 'twitter:creator',
-                content: siteAuthor
-              },
-              {
-                name: 'twitter:title',
-                content: title
-              },
-              {
-                name: 'twitter:description',
-                content: metaDescription
-              }
-            ]
-              .concat(meta)}
-          />
-        )
-      }}
-    />
+  return (
+    <>
+      <html lang={lang} />
+      <title>{fullTitle}</title>
+      {metaTags.map((tag, index) => {
+        const key = tag.name || tag.property || index
+        return <meta key={key} {...tag} />
+      })}
+    </>
   )
 }
 
