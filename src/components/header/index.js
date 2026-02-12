@@ -21,7 +21,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
 
   const {alertSettings} = useStaticQuery(graphql`
     query{
-      alertSettings: sanitySiteSettings(id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}){
+      alertSettings: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}){
         alertToggle
         _rawAlertText
       }
@@ -41,11 +41,14 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       background: `url(${headerBgImage}) repeat bottom left`,
       pb: 2,
       position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
       width: '100%',
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
-      {alertSettings.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
+      {alertSettings?.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>

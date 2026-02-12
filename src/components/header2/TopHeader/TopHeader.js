@@ -17,7 +17,7 @@ const TopHeader = () => {
   /// ////////////////////
   const {alertSettings} = useStaticQuery(graphql`
   query{
-    alertSettings: sanitySiteSettings(id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}){
+    alertSettings: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}){
       alertToggle
       _rawAlertText
     }
