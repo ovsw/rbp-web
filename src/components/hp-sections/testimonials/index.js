@@ -15,7 +15,9 @@ import SectionBg from '../../../images/img-bg-2.png'
 function NextArrow (props) {
   const {className, onClick} = props
   return (
-    <div
+    <button
+      type='button'
+      aria-label='Next testimonials'
       className={className}
       // style={{...style}}
       onClick={onClick}
@@ -33,7 +35,9 @@ function NextArrow (props) {
 function PrevArrow (props) {
   const {className, onClick} = props
   return (
-    <div
+    <button
+      type='button'
+      aria-label='Previous testimonials'
       // style={{...style}}
       className={className}
       sx={{

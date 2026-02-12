@@ -11,7 +11,7 @@ import 'typeface-lato'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <div>
-    <Global styles={theme => ({
+    <Global styles={() => ({
       '*': {boxSizing: 'border-box'},
       body: {
         margin: 0,

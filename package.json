@@ -1,8 +1,8 @@
 {
   "private": true,
   "name": "rbp-app-web",
-  "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "version": "2.0.0",
+  "author": "Ovi Savescu <ovi@ovswebsites.com>",
   "engines": {
     "node": ">=18.0.0"
   },

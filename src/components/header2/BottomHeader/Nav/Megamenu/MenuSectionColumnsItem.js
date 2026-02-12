@@ -7,7 +7,7 @@ import NavLink from '../../../../../elements/nav-link'
 
 import {appContext} from '../../../../../context'
 
-const MenuSectionColumnsItem = ({items, onNavClick}) => {
+const MenuSectionColumnsItem = ({items}) => {
   const {closeMobileNav} = useContext(appContext)
   return (
     <ul sx={{

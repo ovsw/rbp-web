@@ -19,7 +19,7 @@ class MenuSection extends React.Component {
       this.setState(state => ({megaMenuVisible: !state.megaMenuVisible}))
     }
 
-    this.onHoverEnterMainItem = (e) => {
+    this.onHoverEnterMainItem = () => {
       if (!this.state.touchDevice) {
         // if (this.props.breakPointIndex > 2) { // fix for hover opening up the sub-menu even on hamburger nav, if on a non-touch device
         clearTimeout(this.menuTimeout)

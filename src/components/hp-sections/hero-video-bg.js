@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react' // eslint-disable-line
 import VideoCover from 'react-video-cover'
 
 class HeroVideoBg extends React.Component {
-  componentDidUpdate (prevProps) {
+  componentDidUpdate () {
     if (this.props.playFullVideo) {
       this.videoRef.pause()
     } else {

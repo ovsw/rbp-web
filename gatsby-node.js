@@ -28,7 +28,7 @@ async function createGenericPages (graphql, actions, reporter) {
   const pageEdges = (result.data.allSanityPage || {}).edges || []
 
   pageEdges
-    .forEach((edge, index) => {
+    .forEach(edge => {
       const {id, slug = {}} = edge.node
       const path = `/${slug.current}/`
 

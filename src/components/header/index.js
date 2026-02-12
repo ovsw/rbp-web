@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, { useContext, useEffect } from 'react' // eslint-disable-line
-import {Header as ThemeHeader, Container, jsx} from 'theme-ui'
+import { useContext } from 'react'
+import {Container} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
 import {Link, useStaticQuery, graphql} from 'gatsby'
@@ -15,7 +15,7 @@ import {appContext} from '../../context'
 
 import headerBgImage from '../../images/white-paper-bg3.jpg'
 
-const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
+const Header = ({onHideNav, onShowNav, showNav}) => {
   const {siteNav} = useSiteMetadata()
   const {isAlertShowing, hideAlert} = useContext(appContext)
 
@@ -37,7 +37,9 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   // }, [])
 
   return (
-    <ThemeHeader sx={{
+    <Box
+      as='header'
+      sx={{
       background: `url(${headerBgImage}) repeat bottom left`,
       pb: 2,
       position: 'fixed',
@@ -47,7 +49,8 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       width: '100%',
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
-    }}>
+      }}
+    >
       {alertSettings?.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
@@ -63,7 +66,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
           <MainNav navStructure={siteNav} showNav={showNav} />
         </Flex>
       </Container>
-    </ThemeHeader>
+    </Box>
   )
 }
 

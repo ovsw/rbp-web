@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from 'react' // eslint-disable-line
+import { useState } from 'react'
 
 import {jsx} from 'theme-ui'
 import {Themed as Styled} from '@theme-ui/mdx'
@@ -32,15 +32,22 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
       zIndex: 11,
       pt: '127px'
     }}>
-      <div onClick={closeLightBox} sx={{
+      <button
+        type='button'
+        onClick={closeLightBox}
+        aria-label='Close map lightbox'
+        sx={{
         position: 'absolute',
         top: '0',
         bottom: '0',
         left: '0',
         right: '0',
         background: 'rgba(15, 31, 5, 0.62)',
-        zIndex: '11'
-      }} />
+        zIndex: '11',
+        border: 'none',
+        p: 0
+      }}
+      />
       <div sx={{
         bg: 'white',
         borderRadius: 'default',
@@ -64,17 +71,25 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
             borderRadius: '0.25rem  0 0 0.25rem'
           }}
         />
-        <div onClick={closeLightBox} sx={{
+        <button
+          type='button'
+          onClick={closeLightBox}
+          aria-label='Close map lightbox'
+          sx={{
           position: 'absolute',
           cursor: 'pointer',
           color: 'primary',
           bottom: '1rem',
           right: '0.75rem',
           top: '0.65rem',
-          fontSize: '2rem'
-        }}>
+          fontSize: '2rem',
+          border: 'none',
+          bg: 'transparent',
+          p: 0
+        }}
+        >
           <FaTimesCircle />
-        </div>
+        </button>
         <div sx={{
           width: ['auto', 'auto', '1/2'],
           p: 4,
@@ -96,13 +111,11 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
           </div>
           <div sx={{display: 'flex', flexWrap: 'wrap', mt: 4}}>
             {images.map((image, index) => (
-              <a
-                href='#'
+              <button
+                type='button'
                 key={image.asset.url}
-                role='button'
-                tabIndex={0}
                 onClick={e => getCurrImage(e, index)}
-                onKeyUp={e => getCurrImage(e, index)}
+                sx={{border: 'none', bg: 'transparent', p: 0}}
               >
                 <img
                   src={image.asset.url}
@@ -113,7 +126,7 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
                     cursor: 'pointer'
                   }}
                 />
-              </a>
+              </button>
             ))}
           </div>
         </div>

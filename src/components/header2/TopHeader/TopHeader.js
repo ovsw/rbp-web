@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useContext} from 'react' // eslint-disable-line
+import {useContext} from 'react'
 import {jsx} from 'theme-ui'
 import {useStaticQuery, graphql} from 'gatsby'
 // import {jsx, Container, Styled} from 'theme-ui'
