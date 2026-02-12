@@ -346,7 +346,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        //ODLDID id: "G-JQ15EPM0ZZ",
+        // ODLDID id: "G-JQ15EPM0ZZ",
         
         id: "GTM-PGMWV3V",
         // Include GTM in development.

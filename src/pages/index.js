@@ -29,8 +29,6 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const ogImage = (data || {}).ogImage
-
   // const postNodes = (data || {}).posts
   //   ? mapEdgesToNodes(data.posts)
   //     .filter(filterOutDocsWithoutSlugs)

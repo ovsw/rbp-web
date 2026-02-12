@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import React, { useState } from "react"; // eslint-disable-line
-import { Link } from "gatsby";
+import { useState } from "react";
 import { Container, jsx } from "theme-ui";
 import { Themed as Styled } from "@theme-ui/mdx";
 import { Box } from "@theme-ui/components";
 import ModalVideo from "react-modal-video";
 import HeroVideoBg from "./hero-video-bg";
 
-import { FaPlay, FaCalendar, FaChevronRight, FaUser } from "react-icons/fa";
+import { FaCalendar, FaChevronRight, FaUser } from "react-icons/fa";
 
 import VideoPoster from "../../images/rambling-pines-camp-intro-video.jpg";
 import BigLogo from "../../images/rambling-pines-art-logo.png";

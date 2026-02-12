@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"; // eslint-disable-line
 import { jsx, Container } from "theme-ui";
 import { Themed as Styled } from "@theme-ui/mdx";
 import { Box, Flex } from "@theme-ui/components";

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
 import {jsx, Container} from 'theme-ui'
 import {Themed as Styled} from '@theme-ui/mdx'
 import Slider from 'react-slick'
@@ -14,7 +13,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import SectionBg from '../../../images/img-bg-2.png'
 
 function NextArrow (props) {
-  const {className, style, onClick} = props
+  const {className, onClick} = props
   return (
     <div
       className={className}
@@ -32,7 +31,7 @@ function NextArrow (props) {
 }
 
 function PrevArrow (props) {
-  const {className, style, onClick} = props
+  const {className, onClick} = props
   return (
     <div
       // style={{...style}}

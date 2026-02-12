@@ -1,5 +1,3 @@
-import {relative} from 'path'
-
 export default {
   'borderWidths': {
     '0': '0',
