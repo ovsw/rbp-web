@@ -57,10 +57,7 @@ const Hero = () => {
             zIndex: 0
           }}
         >
-          <HeroVideoBg
-            playFullVideo={playFullVideo}
-            poster="https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg"
-          />
+          <HeroVideoBg />
         </div>
         <Container
           className="container"
