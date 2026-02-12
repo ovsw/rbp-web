@@ -1,6 +1,12 @@
-// Load variables from `.env` as soon as possible
+// Load variables from `.env` as soon as possible.
+// Prefer the env-specific file and fall back to development for local builds.
+const fs = require("fs");
+const nodeEnv = process.env.NODE_ENV || "development";
+const envFilePath = `.env.${nodeEnv}`;
+const fallbackEnvFilePath = ".env.development";
+
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "development"}`
+  path: fs.existsSync(envFilePath) ? envFilePath : fallbackEnvFilePath
 });
 
 const path = require(`path`);
