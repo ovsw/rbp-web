@@ -6,6 +6,8 @@ require("dotenv").config({
 const path = require(`path`);
 
 const clientConfig = require("./client-config");
+const isDevelop = process.env.NODE_ENV === "development";
+const hasSanityToken = Boolean(process.env.SANITY_READ_TOKEN);
 
 // const isProd = process.env.NODE_ENV === 'production'
 
@@ -290,8 +292,8 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
-        watchMode: true,
-        overlayDrafts: true
+        watchMode: isDevelop,
+        overlayDrafts: isDevelop && hasSanityToken
       }
     },
     `gatsby-plugin-netlify-headers`,

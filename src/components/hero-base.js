@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {Container, jsx, Styled} from 'theme-ui'
+import {Container, jsx} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import {Box, Flex} from '@theme-ui/components'
 
 const Hero = () => {

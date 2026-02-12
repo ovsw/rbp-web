@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import React, { useState } from "react"; // eslint-disable-line
 import { Link } from "gatsby";
-import { Container, jsx, Styled } from "theme-ui";
+import { Container, jsx } from "theme-ui";
+import { Themed as Styled } from "@theme-ui/mdx";
 import { Box } from "@theme-ui/components";
 import ModalVideo from "react-modal-video";
 import HeroVideoBg from "./hero-video-bg";

@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import {Link, useStaticQuery, graphql} from 'gatsby'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 
 import {FaHamburger, FaPaperPlane} from 'react-icons/fa'
 
@@ -23,19 +24,19 @@ const MainContent = () => {
     query {
       foodImage: file(relativePath: { eq: "lunch-time-illustration.png" }) {
         childImageSharp {
-          fluid(maxWidth: 726) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(width: 726, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
     }
     `
   )
+  const image = getImage(foodImage.childImageSharp)
+
   return (
     <div sx={{
       mx: [0, 5, 4, 5, 6]
     }}>
-      <Img fluid={foodImage.childImageSharp.fluid} />
+      <GatsbyImage image={image} alt='Lunch time illustration' />
     </div>
   )
 }

@@ -107,7 +107,7 @@ export const query = graphql`
     }
     posts: allSanityPost(
       limit: 1
-      sort: { fields: [publishedAt], order: DESC }
+      sort: { publishedAt: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {

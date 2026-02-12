@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container} from 'theme-ui'
+import {jsx, Container} from 'theme-ui'
+import {Themed as Styled} from '@theme-ui/mdx'
 import {Flex, Box} from '@theme-ui/components'
 
 import {Link, useStaticQuery, graphql} from 'gatsby'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 
 import {FaBus} from 'react-icons/fa'
 
@@ -117,17 +118,17 @@ const MainContent = () => {
     query {
       transportationImage: file(relativePath: { eq: "transportation-illustration.png" }) {
         childImageSharp {
-          fluid(maxWidth: 726) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(width: 726, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
     }
     `
   )
+  const image = getImage(transportationImage.childImageSharp)
+
   return (
     <>
-      <Img fluid={transportationImage.childImageSharp.fluid} sx={{maxWidth: '650px', ml: [0, 0, 4]}} />
+      <GatsbyImage image={image} alt='Transportation illustration' sx={{maxWidth: '650px', ml: [0, 0, 4]}} />
     </>
   )
 }

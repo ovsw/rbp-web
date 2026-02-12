@@ -1,5 +1,4 @@
 import React from 'react'
-import {hot} from 'react-hot-loader/root'
 
 import {Global} from '@emotion/react'
 import Header from '../components/header2'
@@ -42,4 +41,4 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   </div>
 )
 
-export default hot(Layout)
+export default Layout

@@ -2,6 +2,7 @@
 import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 import {useStaticQuery, graphql, Link} from 'gatsby'
+import {getSrc} from 'gatsby-plugin-image'
 // import {jsx, Container, Styled} from 'theme-ui'
 
 // import headerBgImage from '../../../images/white-paper-bg3.jpg'
@@ -11,20 +12,12 @@ const MainLogo = () => {
   query{
     logoImage: file(relativePath: { eq: "rambling-pines-logo-retina.png" }) {
       childImageSharp {
-        original{
-          width
-          height
-          src
-        }
-        fixed(width: 120) {
-          ...GatsbyImageSharpFixed_noBase64
-          srcSet
-          src
-        }
+        gatsbyImageData(width: 120, layout: FIXED, placeholder: NONE, formats: [AUTO, WEBP, AVIF])
       }
     }
   }
 `)
+  const logoSrc = getSrc(logoImage.childImageSharp.gatsbyImageData)
   const mainLogoStyles = {
     // background: `url(${headerBgImage}) repeat bottom left`,
     position: 'absolute',
@@ -40,7 +33,7 @@ const MainLogo = () => {
   return (
     <div sx={mainLogoStyles}>
       <Link to='/' title='Rambling Pines Day Camp'>
-        <img src={logoImage.childImageSharp.fixed.src} alt='Rambling Pines Day Camp logo' sx={{maxWidth: ['100px', 'none']}} />
+        <img src={logoSrc} alt='Rambling Pines Day Camp logo' sx={{maxWidth: ['100px', 'none']}} />
       </Link>
     </div>
   )
