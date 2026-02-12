@@ -3,6 +3,9 @@
   "name": "rbp-app-web",
   "version": "1.0.0",
   "author": "Sanity <hello@sanity.io>",
+  "engines": {
+    "node": "14.21.3"
+  },
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
