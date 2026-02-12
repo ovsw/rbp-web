@@ -275,6 +275,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-react-leaflet",
       options: {

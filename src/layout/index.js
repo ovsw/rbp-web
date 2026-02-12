@@ -1,8 +1,7 @@
 import React from 'react'
 import {hot} from 'react-hot-loader/root'
 
-import {Global} from '@emotion/core'
-import {Layout as ThemeLayout} from 'theme-ui'
+import {Global} from '@emotion/react'
 import Header from '../components/header2'
 import Footer from '../components/footer'
 
@@ -12,7 +11,7 @@ import 'typeface-open-sans'
 import 'typeface-lato'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
-  <ThemeLayout>
+  <div>
     <Global styles={theme => ({
       '*': {boxSizing: 'border-box'},
       body: {
@@ -40,7 +39,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     <>{children}</>
 
     <Footer />
-  </ThemeLayout>
+  </div>
 )
 
 export default hot(Layout)

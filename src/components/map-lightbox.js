@@ -3,7 +3,6 @@ import React, { useState } from 'react' // eslint-disable-line
 
 import {jsx, Styled} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
-import Img from 'gatsby-image'
 
 import PortableText from './portableText'
 
@@ -52,14 +51,18 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
         width: ['95%', '95%', '700px', '800px', '1000px'],
         zIndex: '12'
       }}>
-        <Img fluid={images[activeImage].asset.large} sx={{
-          width: ['100%', '100%', '1/2'],
-          backgroundImage: `url('${LoaderImage}')`,
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '0.25rem  0 0 0.25rem'
-          // border: '1px solid #006600'
-        }} />
+        <img
+          src={images[activeImage].asset.url}
+          alt={images[activeImage].alt || title}
+          sx={{
+            width: ['100%', '100%', '1/2'],
+            objectFit: 'cover',
+            backgroundImage: `url('${LoaderImage}')`,
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            borderRadius: '0.25rem  0 0 0.25rem'
+          }}
+        />
         <div onClick={closeLightBox} sx={{
           position: 'absolute',
           cursor: 'pointer',
@@ -93,18 +96,22 @@ const LightBox = ({content: {title, _rawDescription, images}, closeLightBox}) =>
           <div sx={{display: 'flex', flexWrap: 'wrap', mt: 4}}>
             {images.map((image, index) => (
               <a
-                url={image.url}
-                key={image.url}
+                href='#'
+                key={image.asset.url}
                 role='button'
                 tabIndex={0}
                 onClick={e => getCurrImage(e, index)}
                 onKeyUp={e => getCurrImage(e, index)}
               >
-                <Img fluid={image.asset.thumb} sx={{
-                  width: ['3rem', '3rem', '3rem', '3rem', '4rem'],
-                  m: '1px',
-                  cursor: 'pointer'
-                }} />
+                <img
+                  src={image.asset.url}
+                  alt={image.alt || title}
+                  sx={{
+                    width: ['3rem', '3rem', '3rem', '3rem', '4rem'],
+                    m: '1px',
+                    cursor: 'pointer'
+                  }}
+                />
               </a>
             ))}
           </div>

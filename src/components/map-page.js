@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
 
-import {Map, Marker, ImageOverlay, Tooltip} from 'react-leaflet'
+import {MapContainer, Marker, ImageOverlay, Tooltip} from 'react-leaflet'
 import L from 'leaflet'
 
 import mapimage from '../images/rambling-pines-day-camp-map.jpg'
@@ -87,7 +87,7 @@ const MapPage = ({locations}) => {
         {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={closeLightBox} />}
 
         {inBrowser && (
-          <Map
+          <MapContainer
             className='map'
             crs={L.CRS.Simple}
             bounds={[
@@ -136,7 +136,7 @@ const MapPage = ({locations}) => {
                 </React.Fragment>
               )
             })}
-          </Map>
+          </MapContainer>
         )}
       </>
     )

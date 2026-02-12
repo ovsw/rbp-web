@@ -39,7 +39,7 @@ const TopHeader = () => {
         py: 1
       }
     }}>
-      {alertSettings.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
+      {alertSettings?.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
 
       <div className='container-fluid'>
         <div sx={{display: 'flex', pt: [0, null, null, 3], pb: '1'}}>

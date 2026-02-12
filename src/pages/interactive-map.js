@@ -19,12 +19,7 @@ export const query = graphql`
           images {
             alt
             asset {
-              large: fluid(maxWidth: 533, maxHeight: 533) {
-                ...GatsbySanityImageFluid
-              }
-              thumb: fluid(maxWidth: 80, maxHeight: 80) {
-                ...GatsbySanityImageFluid
-              }
+              url
             }
           }
         }
