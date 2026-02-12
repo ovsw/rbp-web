@@ -1,9 +1,9 @@
 module.exports = {
   "plugins": [],
-  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:jsx-a11y/recommended'],
+  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:jsx-a11y/recommended', 'prettier'],
   rules: {
     'react/prop-types': 0,
-    'object-curly-spacing': ['error', 'never']
+    'react/no-unknown-property': ['error', { ignore: ['sx'] }]
   },
   settings: {
     react: {

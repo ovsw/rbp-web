@@ -11,7 +11,7 @@
     "clean-cache": "gatsby clean",
     "dev": "DISABLE_ESLINT_PLUGIN=true mkdir -p .cache && gatsby develop",
     "lint": "eslint .",
-    "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
+    "format": "prettier --write \"**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "date-fns": "^1.30.1",
     "dotenv": "^8.0.0",
     "eslint": "8.57.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.17.3",
@@ -31,7 +32,7 @@
     "gatsby-source-sanity": "7.9.2",
     "postcss-import": "14.1.0",
     "postcss-preset-env": "7.8.3",
-    "prettier-eslint-cli": "^4.7.1",
+    "prettier": "^3.8.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
