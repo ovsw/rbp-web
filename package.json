@@ -71,5 +71,8 @@
     "typeface-dosis": "0.0.72",
     "typeface-lato": "0.0.75",
     "typeface-open-sans": "0.0.75"
+  },
+  "overrides": {
+    "axios": "1.15.2"
   }
 }
